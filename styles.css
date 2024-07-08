@@ -13,7 +13,7 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    width: 300px;
+    width: 400px;
     text-align: center;
 }
 
@@ -23,24 +23,28 @@ h1 {
 
 .input-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 20px;
 }
 
-input[type="text"] {
-    width: 70%;
+input[type="text"], input[type="date"], select {
+    width: 100%;
     padding: 10px;
+    margin: 5px 0;
     border: 1px solid #ddd;
     border-radius: 5px;
 }
 
 button {
+    width: 100%;
     padding: 10px;
     background: #28a745;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 10px;
 }
 
 button:hover {
@@ -58,15 +62,19 @@ li {
     margin-bottom: 10px;
     border-radius: 5px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
 }
 
-li.completed {
+li span {
+    margin: 5px 0;
+}
+
+li.completed span {
     text-decoration: line-through;
 }
 
 li button {
+    align-self: flex-end;
     background: #dc3545;
     border: none;
     padding: 5px 10px;

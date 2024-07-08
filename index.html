@@ -3,14 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do List</title>
+    <title>Enhanced To-Do List</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <h1>To-Do List</h1>
         <div class="input-container">
-            <input type="text" id="todo-input" placeholder="Add a new task...">
+            <input type="text" id="todo-input" placeholder="Task description...">
+            <input type="text" id="assigned-to" placeholder="Assigned to...">
+            <input type="date" id="due-date">
+            <select id="status">
+                <option value="Pending">Pending</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Completed">Completed</option>
+            </select>
             <button onclick="addTodo()">Add</button>
         </div>
         <ul id="todo-list"></ul>
